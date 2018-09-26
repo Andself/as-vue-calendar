@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>calendar demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./calendar.umd.js"></script>
+<link rel="stylesheet" href="./calendar.css">
+
+<div id="app">
+  <demo :value="index" @select="selectDate($event)"></demo>
+  <br>
+  <hr>
+  index: {{index}}
+</div>
+
+<script>
+const docWidth = document.documentElement.clientWidth
+document.documentElement.style.fontSize = docWidth > 750 ? 20 : docWidth > 400 ? 20 * (docWidth / 750) + 'px' : '12px'
+
+new Vue({
+  data () {
+    return {
+      index: ''
+    }
+  },
+  components: {
+    demo: calendar
+  },
+  methods: {
+    selectDate (date) {
+      this.index = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+    }
+  }
+}).$mount('#app')
+</script>
+
+<style>
+#app {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.calendar-warp {
+  box-shadow: 0 0 12px #ccc;
+}
+</style>

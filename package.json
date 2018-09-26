@@ -1,6 +1,6 @@
 {
   "name": "as-vue-calendar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a calendar component",
   "main": "dist/as-vue-calendar.common.js",
   "dependencies": {

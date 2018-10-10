@@ -1,17 +1,22 @@
 {
   "name": "as-vue-calendar",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a calendar component",
-  "main": "dist/calendar.common.js",
+  "main": "lib/calendar.common.js",
   "dependencies": {
+  },
+  "devDependencies": {
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vue build --target lib --name calendar --dest lib src/index.vue"
+    "build": "vue build --target lib --name calendar --dest lib src/index.js"
   },
-  "author": "Andself.chen",
-  "license": "MIT"
+  "author": "Andself.Chen",
+  "license": "MIT",
+  "contributors": [
+    { "name": "Andself.chen", "email": "chende301@foxmail.com", "web": "https://github.com/Andself" }
+  ],
+  "repositories": "https://github.com/Andself/as-vue-calendar"
 }

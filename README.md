@@ -14,18 +14,17 @@
 npm i as-vue-calendar --save
 ```
 
-2. 在组件内引用，就是一个单组件啊
+2. 全局引入组件, CSS已内联，无需单独引入
 
 ```javascript
+//main.js
+import Vue from 'vue'
 import calendar from 'as-vue-calendar'
 
-new Vue({
-  components: {
-    [calendar.name]: calendar
-  }
-})
+Vue.use(calendar)
 
-<as-vue-calendar :value="2018-9-26" @select="alert($event)" />
+// template
+<as-calendar :value="2018-9-26" @select="alert($event)" />
 
 ```
 
